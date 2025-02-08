@@ -66,31 +66,60 @@ const SignUp = () => {
     }
   };
 
+  // const handleGoogleSignIn = async () => {
+  //   try {
+  //     const result = await signInWithPopup(auth, googleProvider);
+  //     console.log("User signed in:", result.user);
+  //     navigate('/')
+  //   } catch (error) {
+  //     console.error("Error signing in:", error);
+  //   }
+  // };
+  // const signInWithFacebook = async () => {
+  //   try {
+  //     await signInWithPopup(auth, facebookProvider);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+  // const signInWithApple = async () => {
+  //   const appleProvider = new OAuthProvider('apple.com');
+  //   try {
+  //     const result = await signInWithPopup(auth, appleProvider);
+  //     console.log("Apple bilan kirildi:", result.user);
+  //   } catch (err) {
+  //     console.error("Apple bilan kirishda xatolik:", err);
+  //   }
+  // };
+
   const handleGoogleSignIn = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       console.log("User signed in:", result.user);
-      navigate('/')
+      navigate("/");
     } catch (error) {
-      console.error("Error signing in:", error);
+      console.error("Google bilan kirishda xatolik:", error.code, error.message);
     }
   };
+
   const signInWithFacebook = async () => {
     try {
       await signInWithPopup(auth, facebookProvider);
+      console.log("Facebook bilan kirildi");
     } catch (err) {
-      console.error(err);
+      console.error("Facebook bilan kirishda xatolik:", err.code, err.message);
     }
   };
+
   const signInWithApple = async () => {
-    const appleProvider = new OAuthProvider('apple.com');
     try {
+      const appleProvider = new OAuthProvider("apple.com");
       const result = await signInWithPopup(auth, appleProvider);
       console.log("Apple bilan kirildi:", result.user);
     } catch (err) {
-      console.error("Apple bilan kirishda xatolik:", err);
+      console.error("Apple bilan kirishda xatolik:", err.code, err.message);
     }
-  };
+  };  
 
   return (
     <div
@@ -101,10 +130,9 @@ const SignUp = () => {
         <h2 className="text-2xl font-semibold text-center mb-4">Create Account</h2>
 
         <div className="mb-3">
-          <label className="block text-gray-700">Email address</label>
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Email address"
             onChange={(e) => setRegisterEmail(e.target.value)}
             className="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -112,7 +140,6 @@ const SignUp = () => {
         </div>
 
         <div className="mb-3">
-          <label className="block text-gray-700">Password</label>
           <div className="relative">
             <input
               type={showPassword ? "text" : "password"}
@@ -132,7 +159,6 @@ const SignUp = () => {
         </div>
 
         <div className="mb-3">
-          <label className="block text-gray-700">Confirm Password</label>
           <div className="relative">
             <input
               type={showConfirmPassword ? "text" : "password"}
@@ -145,12 +171,18 @@ const SignUp = () => {
               className="absolute right-3 top-3"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
             >
-              <RemoveRedEyeOutlinedIcon />
+              <RemoveRedEyeOutlinedIcon className='cursor-pointer' />
             </button>
           </div>
           {confirmPasswordError && <p className="text-red-500 text-sm">{confirmPasswordError}</p>}
         </div>
-
+        <div className='w-full flex justify-start  mt-5'>
+          <button onClick={register} className="px-10 cursor-pointer bg-[#00C29F] hover:bg-[#549b8e] text-white py-[13px] rounded-md">
+            Sign Up
+          </button>
+        </div>
+        <br />
+        <hr />
         <div className="mt-4 text-center">
           <div className='w-full flex justify-start'>
             <p className="text-gray-600 ">Or sign in with</p>
@@ -160,7 +192,7 @@ const SignUp = () => {
               <GoogleIcon fontSize='large' />
               Google
             </button>
-            <button onClick={signInWithFacebook} className='w-[155px] p-[25px] bg-[#F8F8F8] cursor-pointer'>
+            <button onClick={signInWithFacebook} className='w-[155px] p-[25px] bg-[#F8F8F8] cursor-pointer text-blue-500'>
               <FacebookOutlinedIcon fontSize='large' />
               Facebook
             </button>
@@ -170,12 +202,9 @@ const SignUp = () => {
             </button>
           </div>
         </div>
-
-        <div className='w-full flex justify-start mb-5'>
-          <button onClick={register} className="px-10 bg-[#00C29F] text-white py-[13px] rounded-md">
-            Sign Up
-          </button>
-        </div>
+        <p className="text-center mt-4">
+          I already have an account. <Link to="/login" className="text-blue-500">Sign in</Link>
+        </p>
       </div>
     </div>
   );
