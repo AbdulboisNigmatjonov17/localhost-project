@@ -1,0 +1,98 @@
+// import logo from '../../assets/logo.svg'
+// import { NavLink } from 'react-router-dom'
+// import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
+// const Navbar = () => {
+//     return (
+//         <nav className='Container w-full h-[10vh] flex justify-between items-center '>
+//             <div>
+//                 <NavLink to={'/'}>
+//                     <img src={logo} alt="navLogo" />
+//                 </NavLink>
+//             </div>
+//             <ul className='flex gap-5'>
+//                 <li><NavLink>Home</NavLink></li>
+//                 <li><NavLink>Stays</NavLink></li>
+//                 <li><NavLink>Become a host</NavLink></li>
+//             </ul>
+//             <div className='flex gap-3'>
+//                 <NotificationsOutlinedIcon fontSize='large' />
+//                 <AccountCircleIcon fontSize='large' />
+//             </div>
+//         </nav>
+//     )
+// }
+
+// export default Navbar
+
+
+// import logo from '../../assets/logo.svg';
+// import { NavLink } from 'react-router-dom';
+// import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import { auth } from '../../config/firebase';
+// import { useEffect, useState } from 'react';
+
+// const Navbar = () => {
+//     const [user, setUser] = useState(null);
+//     const [isHovered, setIsHovered] = useState(false);
+
+//     useEffect(() => {
+//         const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+//             setUser(currentUser);
+//         });
+
+//         return () => unsubscribe(); // Cleanup function
+//     }, []);
+
+//     return (
+//         <nav className='Container w-full h-[10vh] flex justify-between items-center px-5 shadow-md'>
+//             {/* Logo */}
+//             <div>
+//                 <NavLink to={'/'}>
+//                     <img src={logo} alt="navLogo" />
+//                 </NavLink>
+//             </div>
+
+//             {/* Menu */}
+//             <ul className='flex gap-5'>
+//                 <li><NavLink to={'/'}>Home</NavLink></li>
+//                 <li><NavLink to={'/stays'}>Stays</NavLink></li>
+//                 <li><NavLink to={'/host'}>Become a host</NavLink></li>
+//             </ul>
+
+//             {/* User Section */}
+//             <div className='relative flex gap-3 items-center'>
+//                 <NotificationsOutlinedIcon fontSize='large' />
+
+//                 {/* Profile Image / Default Icon */}
+//                 <div 
+//                     className="relative cursor-pointer"
+//                     onMouseEnter={() => setIsHovered(true)}
+//                     onMouseLeave={() => setIsHovered(false)}
+//                 >
+//                     {user?.photoURL ? (
+//                         <img 
+//                             src={user.photoURL} 
+//                             alt="profile" 
+//                             className="w-10 h-10 rounded-full border-2 border-gray-300"
+//                         />
+//                     ) : (
+//                         <AccountCircleIcon fontSize='large' />
+//                     )}
+
+//                     {/* Hover Modal */}
+//                     {isHovered && user?.email && (
+//                         <div className="absolute top-12 right-0 bg-white shadow-md p-2 rounded-md">
+//                             <p className="text-gray-700 text-sm ">{user.email}</p>
+//                         </div>
+//                     )}
+//                 </div>
+//             </div>
+//         </nav>
+//     );
+// };
+
+// export default Navbar;
+
