@@ -33,11 +33,11 @@ function ProductDetailImages() {
 
 
     return (
-        <div className='w-[850px] bg-red-'>
+        <div className='w-[850px]'>
             {data ? (
                 <div className='w-full flex flex-col gap-3.5'>
                     <div>
-                        <img src={img} alt={data.title} className='w-full h-[540px] rounded-lg ' />
+                        <img src={img} alt={data.title} className='w-full h-[500px] rounded-lg object-cover' />
                     </div>
                     <div className='w-full flex justify-between'>
                         <button onClick={()=> setImg(data.img)}>

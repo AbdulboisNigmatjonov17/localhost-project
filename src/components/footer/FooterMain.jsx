@@ -1,7 +1,7 @@
 import { FooterData } from './footerData'
 const FooterMain = () => {
   return (
-    <div className='w-full bg-[#F4F4F4]'>
+    <div className='w-full bg-[#F4F4F4] '>
       <div className='Container w-full flex justify-between py-10'>
         {
           FooterData.map((item) => {

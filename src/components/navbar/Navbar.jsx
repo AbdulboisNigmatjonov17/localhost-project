@@ -30,9 +30,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-full">
+        <nav className="w-full sticky top-0 z-10 bg-white">
             <div className="Container w-full h-[10vh] flex justify-between items-center px-5">
-
                 <div>
                     <NavLink to={"/"}>
                         <img src={logo} alt="navLogo" className="h-10" />
