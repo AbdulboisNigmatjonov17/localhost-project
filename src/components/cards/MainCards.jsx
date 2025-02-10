@@ -11,7 +11,7 @@ const MainCards = () => {
             <div className="Container grid grid-cols-4 justify-between gap-5">
                 {
                     CardData.map((item) => {
-                        return <Card key={item.id} id={item.id} title={item.title} location={item.location} img={item.img} price={item.price} star={item.star} />
+                        return <Card key={item.id} id={item.id} title={item.title} location={item.location} img={item.img} price={item.price} star={item.star} price_chart={item.price_chart}/>
                     })
                 }
             </div>

@@ -23,6 +23,7 @@ const CardData = [
         price: 658,
         img: CardImg1,
         star: 4.9,
+        price_chart: true
     },
     {
         id: 2,
@@ -31,6 +32,7 @@ const CardData = [
         price: 410,
         img: CardImg2,
         star: 4.5,
+        price_chart: false
     },
     {
         id: 3,
@@ -39,6 +41,7 @@ const CardData = [
         price: 325,
         img: CardImg3,
         star: 5.0,
+        price_chart: false
     },
     {
         id: 4,
@@ -47,6 +50,7 @@ const CardData = [
         price: 485,
         img: CardImg4,
         star: 4.6,
+        price_chart: true
     },
     {
         id: 5,
@@ -55,6 +59,7 @@ const CardData = [
         price: 502,
         img: CardImg5,
         star: 4.8,
+        price_chart: true
     },
     {
         id: 6,
@@ -63,6 +68,7 @@ const CardData = [
         price: 658,
         img: CardImg1,
         star: 4.9,
+        price_chart: false
     },
     {
         id: 7,
@@ -71,6 +77,7 @@ const CardData = [
         price: 655,
         img: CardImg7,
         star: 4.9,
+        price_chart: true
     },
     {
         id: 8,
@@ -79,6 +86,7 @@ const CardData = [
         price: 320,
         img: CardImg8,
         star: 5.0,
+        price_chart: false
     },
     {
         id: 9,
@@ -87,6 +95,7 @@ const CardData = [
         price: 395,
         img: CardImg9,
         star: 5.0,
+        price_chart: false
     },
     {
         id: 10,
@@ -95,6 +104,7 @@ const CardData = [
         price: 385,
         img: CardImg10,
         star: 4.9,
+        price_chart: true
     },
     {
         id: 11,
@@ -103,6 +113,7 @@ const CardData = [
         price: 385,
         img: CardImg11,
         star: 5.0,
+        price_chart: true
     },
     {
         id: 12,
@@ -111,6 +122,7 @@ const CardData = [
         price: 385,
         img: CardImg12,
         star: 5.0,
+        price_chart: false
     },
     {
         id: 13,
@@ -119,6 +131,7 @@ const CardData = [
         price: 385,
         img: CardImg13,
         star: 5.0,
+        price_chart: false
     },
     {
         id: 14,
@@ -127,6 +140,7 @@ const CardData = [
         price: 385,
         img: CardImg14,
         star: 5.0,
+        price_chart: true
     },
     {
         id: 15,
@@ -135,6 +149,7 @@ const CardData = [
         price: 385,
         img: CardImg15,
         star: 5.0,
+        price_chart: false
     },
     {
         id: 16,
@@ -143,6 +158,7 @@ const CardData = [
         price: 385,
         img: CardImg16,
         star: 5.0,
+        price_chart: false
     },
 ]
 export default CardData

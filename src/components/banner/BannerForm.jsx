@@ -7,7 +7,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 const BannerForm = () => {
     return (
         <>
-            <section className='w-[100vw] h-[264px] bg-cover bg-no-repeat pt-[50px] pb-[30px]' style={{ backgroundImage: `url(${bannerBgImage})` }}>
+            <section className='w-full h-[264px] bg-cover bg-no-repeat pt-[50px] pb-[30px]' style={{ backgroundImage: `url(${bannerBgImage})` }}>
                 <div className='Container flex flex-col gap-6'>
                     <div className='flex flex-col gap-2'>
                         <h1 className='font-bold text-[40px] leading-[45px]'>Find a <span className='text-[#00C29F]'>host</span> for every journey</h1>
