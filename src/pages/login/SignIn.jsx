@@ -103,26 +103,6 @@ const SignIn = () => {
           </button>
         </div>
         <hr />
-
-        {/* <div className="mt-4 text-center">
-          <div className='w-full flex justify-start'>
-            <p className="text-gray-600 ">Or sign in with</p>
-          </div>
-          <div className="flex justify-center gap-4 mt-2">
-            <div className='w-[155px] p-[25px] bg-[#F8F8F8] cursor-pointer'>
-              <GoogleIcon fontSize='large' />
-              Google
-            </div>
-            <div className='w-[155px] p-[25px] bg-[#F8F8F8] text-blue-500 cursor-pointer'>
-              <FacebookOutlinedIcon fontSize='large' />
-              Facebook
-            </div>
-            <div className='w-[155px] p-[25px] bg-[#F8F8F8] cursor-pointer'>
-              <AppleIcon fontSize='large' />
-              Apple
-            </div>
-          </div>
-        </div> */}
         <div className="mt-4 text-center">
           <div className='w-full flex justify-start'>
             <p className="text-gray-600 ">Or sign in with</p>

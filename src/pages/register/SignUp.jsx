@@ -66,32 +66,6 @@ const SignUp = () => {
     }
   };
 
-  // const handleGoogleSignIn = async () => {
-  //   try {
-  //     const result = await signInWithPopup(auth, googleProvider);
-  //     console.log("User signed in:", result.user);
-  //     navigate('/')
-  //   } catch (error) {
-  //     console.error("Error signing in:", error);
-  //   }
-  // };
-  // const signInWithFacebook = async () => {
-  //   try {
-  //     await signInWithPopup(auth, facebookProvider);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
-  // const signInWithApple = async () => {
-  //   const appleProvider = new OAuthProvider('apple.com');
-  //   try {
-  //     const result = await signInWithPopup(auth, appleProvider);
-  //     console.log("Apple bilan kirildi:", result.user);
-  //   } catch (err) {
-  //     console.error("Apple bilan kirishda xatolik:", err);
-  //   }
-  // };
-
   const handleGoogleSignIn = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
@@ -119,7 +93,7 @@ const SignUp = () => {
     } catch (err) {
       console.error("Apple bilan kirishda xatolik:", err.code, err.message);
     }
-  };  
+  };
 
   return (
     <div

@@ -55,7 +55,7 @@ const Navbar = () => {
                         <div className="relative flex items-center">
                             <button onClick={toggleModal} className="focus:outline-none">
                                 <img
-                                    src={user.photoURL || "https://plus.unsplash.com/premium_photo-1683121366070-5ceb7e007a97?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"}
+                                    src={user.photoURL  || "https://plus.unsplash.com/premium_photo-1683121366070-5ceb7e007a97?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"}
                                     alt="User"
                                     className="w-10 h-10 rounded-full cursor-pointer object-cover"
                                 />
