@@ -25,16 +25,16 @@ const Card = ({ id, img, title, location, star, price, price_chart }) => {
             <div className='w-full h-[100px] flex flex-col gap-[14px] p-5 justify-center'>
                 <div className='w-full flex justify-between'>
                     <div>
-                        <h2>{title}</h2>
-                        <h3>{location}</h3>
+                        <h2 className='text-[16px] leading-4 font-semibold'>{title}</h2>
+                        <h3 className='text-[#787878] font-normal'>{location}</h3>
                     </div>
-                    <div className='flex items-center'>
+                    <div className='flex items-center font-semibold text-[14px] leading-[15px]'>
                         {star} <div className='text-yellow-500'><StarIcon /></div>
                     </div>
                 </div>
                 <div className='w-full flex justify-between'>
-                    <h3>${price}<span>/night</span></h3>
-                    {price_chart ? <div className='text-[#00C29F] flex items-center gap-2'><div className='border-[1.5px] rounded-[3.5px]'><TrendingDownOutlinedIcon /></div> <span>Price chart</span></div> : null}
+                    <h3 className='font-semibold text-[19px] leading-[13px] '>${price}<span className='text-[#787878] font-normal text-[14px]'>/night</span></h3>
+                    {price_chart ? <div className='text-[#00C29F] flex items-center gap-2'><div className='border-[1.5px] rounded-[3.5px]'><TrendingDownOutlinedIcon /></div> <span className='text-[14px] leading-4 font-normal'>Price chart</span></div> : null}
                 </div>
             </div>
         </div >
