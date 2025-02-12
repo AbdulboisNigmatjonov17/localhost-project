@@ -3,8 +3,9 @@ import HowToRegIcon from '@mui/icons-material/HowToReg';
 import EventBusyIcon from '@mui/icons-material/EventBusy';
 import DetailAboutData from './DetailAboutData'
 import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import * as Icons from '@mui/icons-material'
-import { Link } from'react-router-dom'
+import { Link } from 'react-router-dom'
 import MapImage from '../../assets/Map.png'
 
 const DetailAbout = () => {
@@ -35,8 +36,8 @@ const DetailAbout = () => {
                                 <StoreIcon fontSize='large' />
                             </div>
                             <div>
-                                <h4>Dedicated workspace</h4>
-                                <h5>A private room equipped with WiFi</h5>
+                                <h4 className='font-semibold text-[18px] leading-7 text-[#171E1D]'>Dedicated workspace</h4>
+                                <h5 className='text-[16px] leading-[18px] font-normal text-[#7A7A7A]'>A private room equipped with WiFi</h5>
                             </div>
                         </div>
                         <div className='flex items-center gap-5 '>
@@ -44,8 +45,8 @@ const DetailAbout = () => {
                                 <HowToRegIcon fontSize='large' />
                             </div>
                             <div>
-                                <h4>Self check-in</h4>
-                                <h5>Check in with just your phone</h5>
+                                <h4 className='font-semibold text-[18px] leading-7 text-[#171E1D]'>Self check-in</h4>
+                                <h5 className='text-[16px] leading-[18px] font-normal text-[#7A7A7A]'>Check in with just your phone</h5>
                             </div>
                         </div>
                         <div className='flex items-center gap-5 '>
@@ -53,23 +54,23 @@ const DetailAbout = () => {
                                 <EventBusyIcon fontSize='large' />
                             </div>
                             <div>
-                                <h4>Free cancellation</h4>
-                                <h5>Cancel anytime</h5>
+                                <h4 className='font-semibold text-[18px] leading-7 text-[#171E1D]'>Free cancellation</h4>
+                                <h5 className='text-[16px] leading-[18px] font-normal text-[#7A7A7A]'>Cancel anytime</h5>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr />
+            <hr /><br />
             <div className='w-full flex justify-between items-center'>
                 <div className='flex flex-col items-start gap-5'>
-                    <h3>Amenities</h3>
+                    <h3 className='font-semibold text-2xl leading-[26px] text-[#171E1D]'>Amenities</h3>
                     <div className='grid grid-cols-3 gap-7'>
                         {
                             DetailAboutData.map((item) => {
                                 const IconComponent = Icons[item.icon];
                                 return (
-                                    <div key={item.id} className='flex'>
+                                    <div key={item.id} className='flex gap-2.5 font-normal text-[16px] leading-[18px] text-[#171E1D]'>
                                         {IconComponent && <IconComponent />}
                                         {item.title}
                                     </div>
@@ -81,17 +82,17 @@ const DetailAbout = () => {
                         Show all amenities
                     </button>
                 </div>
-                <div className='w-[480px]'>
+                <div className='w-[480px] flex flex-col gap-2.5'>
                     <div className='w-full flex justify-between '>
-                        <div>
-                            <h3>Where youll be</h3>
-                            <span>The Bridle Path</span>
+                        <div className='flex flex-col gap-1.5'>
+                            <h3 className='font-semibold text-2xl leading-[26px] text-[#171E1D]'>Where youll be</h3>
+                            <span className='font-normal text-[16px] leading-[18px] text-[#171E1D]'><LocationOnIcon />The Bridle Path</span>
                         </div>
                         <div className='flex items-center gap-2'>
                             <CloudOutlinedIcon fontSize='large' />
                             <div>
-                                <h4>20°C</h4>
-                                <span>Broken clouds</span>
+                                <h4 className='font-semibold text-[16px] leading-6'>20°C</h4>
+                                <span className='text-[#7A7A7A] font-normal text-[14px] leading-[16px]'>Broken clouds</span>
                             </div>
                         </div>
                     </div>

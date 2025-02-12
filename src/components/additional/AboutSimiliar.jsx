@@ -37,15 +37,15 @@ const AboutSimiliar = () => {
     return (
         <div className='w-full flex flex-col gap-5'>
             <div className="w-full flex justify-between items-center">
-                <h3>Similar stays</h3>
+                <h3 className='font-semibold text-2xl leading-7'>Similar stays</h3>
                 <Link to={'/'}>
                     <h4 className='text-[#00C29F]'>View all</h4>
                 </Link>
             </div>
             <div className="flex justify-between">
                 {randomCards.map((item) => (
-                    <div key={item.id} className="w-[30%] bg-white h-[145px] flex justify-between rounded-lg overflow-hidden">
-                        <div className="relative w-[200px]">
+                    <div key={item.id} className="w-[30%] bg-white h-[145px] flex gap-5 rounded-lg overflow-hidden">
+                        <div className="relative w-[180px]">
                             <Link to={`/detail/${item.id}`}>
                                 <button className="w-full" onClick={() => {
                                     handleLike(item.id);
@@ -65,17 +65,17 @@ const AboutSimiliar = () => {
                                 )}
                             </button>
                         </div>
-                        <div className="flex flex-col justify-center pb-5 p-4 ">
+                        <div className="flex flex-col justify-center pb-5 p-2 gap-3.5">
                             <div>
-                                <h3>{item.title}</h3>
-                                <h4>{item.location}</h4>
+                                <h3 className="font-semibold text-[16px] leading-[18px] text-[#171E1D]">{item.title}</h3>
+                                <h4 className="text-[#787878] font-normal text-[14px] leading-[16px]">{item.location}</h4>
                             </div>
-                            <div>
-                                ${item.star}
+                            <div className="text-yellow-500">
+                                <span className="font-semibold text-[14px] leading-[16px] text-[#171E1D]">{item.star}</span>
                                 <Star />
                             </div>
-                            <div>
-                                ${item.price} <span>/night | {Math.floor(Math.random() * 10) + 1} guests</span>
+                            <div className="text-[#00C29F] font-normal tetxt-[14px] leading-4">
+                                ${item.price} <span className="text-[#787878] ">/night | {Math.floor(Math.random() * 10) + 1} guests</span>
                             </div>
                         </div>
                     </div>

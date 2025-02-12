@@ -6,7 +6,7 @@ const AboutReviews = () => {
     return (
         <div className='Container flex flex-col gap-5'>
             <div className='w-full flex justify-between '>
-                <h3>Reviews</h3>
+                <h3 className='font-semibold text-2xl leading-7'>Reviews</h3>
                 <Link to={'/'}>
                     <h4 className='text-[#00C29F]'>View all</h4>
                 </Link>
@@ -20,15 +20,15 @@ const AboutReviews = () => {
                                     <div className='w-full flex gap-4'>
                                         <img src={item.img} alt={`${item.name}` + item.id} className='w-16 h-16 object-cover rounded-full ' />
                                         <div>
-                                            <h3>{item.name}</h3>
-                                            <h4>{item.date}</h4>
+                                            <h3 className=' font-semibold text-[16px] leading-6'>{item.name}</h3>
+                                            <h4 className='text-[#7A7A7A] font-normal text-[14px] leading-[16px]'>{item.date}</h4>
                                         </div>
                                     </div>
                                     <div className='text-yellow-500  flex'>
-                                        <span className='text-black'>{item.star}</span><Star />
+                                        <span className='text-black font-semibold text-[16px] leading-[18px]'>{item.star}</span><Star />
                                     </div>
                                 </div>
-                                <p>{item.text}</p>
+                                <p className='font-normal text-[16px] leading-6'>{item.text}</p>
                             </div>
                         )
                     })
