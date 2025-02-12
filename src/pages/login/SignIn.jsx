@@ -76,17 +76,17 @@ const SignIn = () => {
             placeholder="Email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border rounded-lg px-3 py-2 mt-1"
+            className="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none border-[#D9D9D9]"
           />
         </div>
 
-        <div className="mb-3 w-full border px-3 rounded-lg mt-1 flex justify-between">
+        <div className="mb-3 w-full border px-3 rounded-lg mt-1 flex justify-between border-[#D9D9D9]">
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-lg py-2 mt-1 outline-none "
+            className="w-full rounded-lg py-2 mt-1 outline-none"
           />
           <button
             type="button"

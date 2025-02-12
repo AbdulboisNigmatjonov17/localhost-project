@@ -108,7 +108,7 @@ const SignUp = () => {
             type="email"
             placeholder="Email address"
             onChange={(e) => setRegisterEmail(e.target.value)}
-            className="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none border-[#D9D9D9] "
           />
           {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
         </div>
@@ -119,7 +119,7 @@ const SignUp = () => {
               type={showPassword ? "text" : "password"}
               onChange={(e) => setRegisterPassword(e.target.value)}
               placeholder="Password"
-              className="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none   border-[#D9D9D9]"
             />
             <button
               type="button"
@@ -138,7 +138,7 @@ const SignUp = () => {
               type={showConfirmPassword ? "text" : "password"}
               onChange={(e) => setRegisterConfirmPassword(e.target.value)}
               placeholder="Confirm Password"
-              className="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none   border-[#D9D9D9]"
             />
             <button
               type="button"
