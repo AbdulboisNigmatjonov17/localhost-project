@@ -55,7 +55,7 @@ const ProductDetail = () => {
             {error ? (
                 <p className="text-red-500">{error}</p>
             ) : data ? (
-                <div className="w-[550px] shadow-2xl py-[26px] px-6 flex flex-col justify-between ">
+                <div className="w-[500px] shadow-2xl py-[26px] px-6 flex flex-col justify-between ">
                     <div className="w-full flex justify-between">
                         <div className="flex flex-col gap-1.5">
                             <h2 className="text-[#171E1D] font-semibold text-[29px] leading-[32px]">{data.title}</h2>

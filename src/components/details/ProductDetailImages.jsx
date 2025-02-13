@@ -33,7 +33,7 @@ function ProductDetailImages() {
 
 
     return (
-        <div className='w-[850px]'>
+        <div className='w-[800px]'>
             {data ? (
                 <div className='w-full flex flex-col gap-3.5'>
                     <div>
